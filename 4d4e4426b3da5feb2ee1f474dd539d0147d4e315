@@ -1,0 +1,17 @@
+[33mcommit 4d4e4426b3da5feb2ee1f474dd539d0147d4e315[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Daniel <daniel.alberto.amestoy@gmail.com>
+Date:   Sun Dec 11 20:18:53 2022 -0300
+
+    estructuracion inicial del proyecto y creacion de entidades
+
+[33mcommit 61ab0fcc5119ae68a7b7038ed6e450d97423168a[m
+Author: Daniel <daniel.alberto.amestoy@gmail.com>
+Date:   Sun Dec 11 19:38:33 2022 -0300
+
+    se agrega configuracion a base de datos mysql en application.properties
+
+[33mcommit 919ce760f9bbfeada5ef1ed8a05c58fde46475e9[m
+Author: Daniel <daniel.alberto.amestoy@gmail.com>
+Date:   Sun Dec 11 19:29:47 2022 -0300
+
+    primer commit

@@ -1,2 +1,9 @@
-package com.factorit.apiecommerce.repository;public interface ProductRepository {
+package com.factorit.apiecommerce.repository;
+
+import com.factorit.apiecommerce.model.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ProductRepository extends JpaRepository<Product, Integer> {
 }
