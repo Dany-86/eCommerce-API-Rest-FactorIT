@@ -1,7 +1,7 @@
 package com.factorit.apiecommerce.controller;
 
-import com.factorit.apiecommerce.model.Product;
-import com.factorit.apiecommerce.service.ProductService;
+import com.factorit.apiecommerce.model.Client;
+import com.factorit.apiecommerce.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,17 +13,17 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/productos")
-public class ProductController {
+@RequestMapping("/clientes")
+public class ClientsController {
 
     @Autowired
-    private ProductService productService;
+    private ClientService clientService;
 
-    // Devuelve una lista de todos los productos
+    // Devuelve una lista de todos los clientes
     @GetMapping("")
     @ResponseBody
-    public ResponseEntity<List<Product>> getProducts() {
-        return new ResponseEntity<List<Product>>(this.productService.getAllClients(), HttpStatus.OK);
+    public ResponseEntity<List<Client>> getProducts() {
+        return new ResponseEntity<List<Client>>(this.clientService.getAllClients(), HttpStatus.OK);
     }
 
 }
