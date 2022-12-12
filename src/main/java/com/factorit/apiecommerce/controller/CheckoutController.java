@@ -35,15 +35,15 @@ public class CheckoutController {
 
     //REQUERIMIENTOS
 
-    //Existen dos tipos de carritos, común y especial. Este hecho se determinará con un flag sobre el
-    //servicio de creación del carrito (isSpecial:true) además de acompañarse la fecha de creación del
-    //mismo.
-    //El cliente puede realizar varias compras en el mismo día.
-    //No es necesario desarrollar ningún tipo de ABM de los productos, ni de clientes. Los productos
-    //enviados al agregarse al carrito se tomarán como “válidos” y el precio indicado será el que se tome
-    //como válido (además no se tiene en cuenta stocks de los mismos, así que no hace falta que realices
-    //control de este punto).
-    //Los productos deberán tener precios mayores a $100.
+    //>>Existen dos tipos de carritos, común y especial. Este hecho se determinará con un flag sobre el
+    //>>servicio de creación del carrito (isSpecial:true) además de acompañarse la fecha de creación del
+    //>>mismo.
+    //>>El cliente puede realizar varias compras en el mismo día.
+    //>>No es necesario desarrollar ningún tipo de ABM de los productos, ni de clientes. Los productos
+    //>>enviados al agregarse al carrito se tomarán como “válidos” y el precio indicado será el que se tome
+    //>>como válido (además no se tiene en cuenta stocks de los mismos, así que no hace falta que realices
+    //>>control de este punto).
+    //>>Los productos deberán tener precios mayores a $100.
     //Para calcular el valor del carrito se debe tener en cuenta:
     // Si se compran más de 3 productos se realizará un descuento de $100 para carritos comunes
     //y de $150 para carritos especiales.

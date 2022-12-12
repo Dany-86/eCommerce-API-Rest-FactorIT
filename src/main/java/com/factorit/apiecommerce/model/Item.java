@@ -17,14 +17,22 @@ public class Item {
     @OneToOne
     private Product product;
     private Integer quantity;
+    @ManyToOne
+    private Cart cart;
 
     public Item() {
     }
 
-    public Item(Integer id, Product product, Integer quantity) {
+    public Item(Product product, Integer quantity, Cart cart) {
+        this.product = product;
+        this.quantity = quantity;
+        this.cart = cart;
+    }
+
+    public Item(Integer id, Product product, Integer quantity, Cart cart) {
         this.id = id;
         this.product = product;
         this.quantity = quantity;
+        this.cart = cart;
     }
-
 }

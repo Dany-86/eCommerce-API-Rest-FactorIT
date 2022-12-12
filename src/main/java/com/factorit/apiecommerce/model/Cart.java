@@ -26,9 +26,16 @@ public class Cart {
     public Cart() {
     }
 
-    public Cart(Boolean isSpecial, Client client) {
+    public Cart(Boolean isSpecial, Date creationDate, Client client) {
         this.isSpecial = isSpecial;
+        this.creationDate = creationDate;
         this.client = client;
     }
 
+    public Cart(Integer id, Boolean isSpecial, Date creationDate, Client client) {
+        this.id = id;
+        this.isSpecial = isSpecial;
+        this.creationDate = creationDate;
+        this.client = client;
+    }
 }
