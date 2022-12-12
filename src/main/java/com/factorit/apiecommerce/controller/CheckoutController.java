@@ -1,6 +1,7 @@
 package com.factorit.apiecommerce.controller;
 
 import com.factorit.apiecommerce.model.Cart;
+import com.factorit.apiecommerce.model.Item;
 import com.factorit.apiecommerce.service.CartService;
 import com.factorit.apiecommerce.service.ClientService;
 import com.factorit.apiecommerce.service.ProductService;
@@ -17,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/carrito")
+@RequestMapping("/carritos")
 public class CheckoutController {
 
     @Autowired
@@ -82,16 +83,22 @@ public class CheckoutController {
 
     // ------------------------------------- MANEJO DE CARRITOS ---------------------------------------------
 
+    //>> Devuelve una lista de todos los clientes
+    @GetMapping("")
+    @ResponseBody
+    public ResponseEntity<List<Cart>> getCarts() {
+        return new ResponseEntity<List<Cart>>(this.cartService.getAllClients(), HttpStatus.OK);
+    }
 
     // - Consultar el estado de un carrito. Esta acción devolverá el total de productos que
     //contiene
     // recibe dni
     // busca el carrito asociado a ese dni
     // devuelve los productos de ese carrito
-    @GetMapping("/{id_cart}")
+    @GetMapping("/{dni}")
     @ResponseBody
-    public ResponseEntity<?> getCart(@PathVariable("id_cart") Integer idCart) {
-        return new ResponseEntity<>("", HttpStatus.OK);
+    public ResponseEntity<List<Item>> getCart(@PathVariable Integer dni) {
+        return new ResponseEntity<List<Item>>(this.cartService.getCartItemsByClient(dni), HttpStatus.OK);
     }
 
     //- Crear un carrito.
@@ -99,8 +106,9 @@ public class CheckoutController {
     // Crea un Carrito correspondiente a ese dni
     @PostMapping("")
     @ResponseBody
-    public ResponseEntity<?> postCart() {
-        return new ResponseEntity("", HttpStatus.OK);
+    public ResponseEntity<Object> postCart(@RequestBody Integer dni) {
+        this.cartService.createCart(dni);
+        return new ResponseEntity("Carrito Creado", HttpStatus.CREATED);
     }
 
     // - Eliminar un carrito.

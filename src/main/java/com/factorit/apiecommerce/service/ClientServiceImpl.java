@@ -17,4 +17,9 @@ public class ClientServiceImpl implements ClientService {
     public List<Client> getAllClients() {
         return clientRepository.findAll();
     }
+
+    @Override
+    public Client getClientByDni(Integer dni) {
+        return this.clientRepository.findById(dni).get();
+    }
 }
