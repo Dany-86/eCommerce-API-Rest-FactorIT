@@ -90,7 +90,7 @@ public class CheckoutController {
         return new ResponseEntity<List<Cart>>(this.cartService.getAllClients(), HttpStatus.OK);
     }
 
-    // - Consultar el estado de un carrito. Esta acción devolverá el total de productos que
+    //>> - Consultar el estado de un carrito. Esta acción devolverá el total de productos que
     //contiene
     // recibe dni
     // busca el carrito asociado a ese dni
@@ -101,23 +101,25 @@ public class CheckoutController {
         return new ResponseEntity<List<Item>>(this.cartService.getCartItemsByClient(dni), HttpStatus.OK);
     }
 
-    //- Crear un carrito.
+    //>>- Crear un carrito.
     // Recibe dni
     // Crea un Carrito correspondiente a ese dni
-    @PostMapping("")
+    @PostMapping("/{dni}")
     @ResponseBody
-    public ResponseEntity<Object> postCart(@RequestBody Integer dni) {
+    public ResponseEntity<Object> postCart(@PathVariable Integer dni) {
         this.cartService.createCart(dni);
         return new ResponseEntity("Carrito Creado", HttpStatus.CREATED);
     }
 
-    // - Eliminar un carrito.
+    //>> - Eliminar un carrito.
     // recibe un id de carrito
     // elimina el carrito correspondiente al id
-    @DeleteMapping("/eliminar-carrito/{id_cart}")
+    @DeleteMapping("/eliminar-carrito/{dni}")
     @ResponseBody
-    public ResponseEntity deleteCart(@PathVariable Integer idCart) {
-        return new ResponseEntity("", HttpStatus.OK);
+    public ResponseEntity deleteCart(@PathVariable Integer dni) {
+        //System.out.println("En controller DNI: " + dni);
+        this.cartService.deleteCartByDni(dni);
+        return new ResponseEntity("carrito borrado", HttpStatus.OK);
     }
 
     // - Finalización de un carrito por compra. Esta acción cerrará el carrito, dando el valor
@@ -127,35 +129,37 @@ public class CheckoutController {
     // crea una nueva compra con los datos del carrito
     // elimina el carrito correspondiente
     // devuelve el id de compra de la nueva compra generada
-    @PostMapping("/terminar/{id_cart}")
+    @PostMapping("/terminar/{dni}")
     @ResponseBody
-    public ResponseEntity closeCart(@PathVariable("id_cart") Integer idCart) {
+    public ResponseEntity closeCart(@PathVariable Integer dni) {
         return new ResponseEntity("", HttpStatus.OK);
     }
 
     // --------------------------------- MANEJO DE PRODUCTOS DE UN CARRITO -------------------------------------
 
-    // - Agregar productos de un carrito.
-    // recibe un numero de carrito por url
+    //>> - Agregar productos de un carrito.
+    // recibe un dni correspondiente al carrito por url
     // recibe un numero de producto por url
     // busca el carrito por id
     // agreag busca un producto por id
     // agrega el producto a la lista del carrito
-    @PostMapping("/{id_cart}/agregar-producto/{id_product}")
+    @PostMapping("/{dni}/agregar-producto/{id_product}")
     @ResponseBody
-    public ResponseEntity postProductToCart(@PathVariable("id_cart") Integer idCart, @PathVariable("id_product") Integer idProduct) {
+    public ResponseEntity postProductToCart(@PathVariable Integer dni, @PathVariable("id_product") Integer idProduct) {
+        this.cartService.addProductToCart(dni, idProduct);
         return new ResponseEntity("", HttpStatus.OK);
     }
 
-     // - Eliminar productos de un carrito.
+     //>> - Eliminar productos de un carrito.
     //  recibe un numero de carrito por url
     //  recibe un numero de producto por url
     //   busca el carrito por id
     // elimina el producto por id
-    @DeleteMapping("/{id_cart}/eliminar-producto/{idProduct}")
+    @DeleteMapping("/{dni}/eliminar-producto/{idProduct}")
     @ResponseBody
-    public ResponseEntity deleteProductFromCart(@PathVariable Integer idCart, @PathVariable Integer idProduct) {
-        return new ResponseEntity(null);
+    public ResponseEntity deleteProductFromCart(@PathVariable Integer dni, @PathVariable Integer idProduct) {
+        this.cartService.dropProductFromCart(dni, idProduct);
+        return new ResponseEntity(HttpStatus.OK);
     }
 
 }
