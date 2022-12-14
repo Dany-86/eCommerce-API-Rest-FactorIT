@@ -4,12 +4,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "clients")
-public class Client {
+public class Client implements Serializable {
 
     @Id
     private Integer dni;

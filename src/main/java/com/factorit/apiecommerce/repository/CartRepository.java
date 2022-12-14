@@ -10,6 +10,5 @@ import java.util.List;
 public interface CartRepository extends JpaRepository<Cart, Integer> {
 
     Cart getCartByClient_Dni(Integer dni);
-    void deleteCartByClient_Dni(Integer dni);
 
 }

@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 
 
 @Getter
@@ -14,12 +14,12 @@ import java.util.Date;
 @Entity
 @Table(name = "purchases")
 
-public class Purchase {
+public class Purchase implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Date date;
+    private LocalDate date;
     private Double total;
 
     @ManyToOne
@@ -28,13 +28,13 @@ public class Purchase {
     public Purchase() {
     }
 
-    public Purchase(Date date, Double total, Client client) {
+    public Purchase(LocalDate date, Double total, Client client) {
         this.date = date;
         this.total = total;
         this.client = client;
     }
 
-    public Purchase(Integer id, Date date, Double total, Client client) {
+    public Purchase(Integer id, LocalDate date, Double total, Client client) {
         this.id = id;
         this.date = date;
         this.total = total;

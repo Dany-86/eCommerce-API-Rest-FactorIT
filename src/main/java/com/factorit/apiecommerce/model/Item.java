@@ -10,16 +10,18 @@ import java.io.Serializable;
 @Setter
 @Entity
 @Table(name = "items")
-public class Item {
+public class Item implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     @OneToOne
     private Product product;
     private Integer quantity;
-//    @ManyToOne
-//    private Cart cart;
+    @ManyToOne
+    @JoinColumn
+    private Cart cart;
 
     public Item() {
     }
@@ -35,16 +37,16 @@ public class Item {
         this.quantity = quantity;
     }
 
-    //    public Item(Product product, Integer quantity, Cart cart) {
-//        this.product = product;
-//        this.quantity = quantity;
-//        this.cart = cart;
-//    }
+        public Item(Product product, Integer quantity, Cart cart) {
+        this.product = product;
+        this.quantity = quantity;
+        this.cart = cart;
+    }
 
-//    public Item(Integer id, Product product, Integer quantity, Cart cart) {
-//        this.id = id;
-//        this.product = product;
-//        this.quantity = quantity;
-//        this.cart = cart;
-//    }
+    public Item(Integer id, Product product, Integer quantity, Cart cart) {
+        this.id = id;
+        this.product = product;
+        this.quantity = quantity;
+        this.cart = cart;
+    }
 }

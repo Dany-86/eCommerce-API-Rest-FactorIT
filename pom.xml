@@ -14,7 +14,7 @@
 	<name>api-ecommerce</name>
 	<description>Examen Tecnico Back-End Java, Spring/Spring Boot, JPA/Hibernate</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -51,6 +51,10 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.modelmapper</groupId>-->
+<!--			<artifactId>modelmapper</artifactId>-->
+<!--		</dependency>-->
 	</dependencies>
 
 	<build>
