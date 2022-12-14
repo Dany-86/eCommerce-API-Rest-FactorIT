@@ -3,11 +3,17 @@ package com.factorit.apiecommerce.controller;
 import com.factorit.apiecommerce.dto.MessageDTO;
 import com.factorit.apiecommerce.model.Purchase;
 import com.factorit.apiecommerce.service.PurchaseService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.awt.print.Book;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -18,14 +24,24 @@ public class PurchasesController {
     @Autowired
     private PurchaseService purchaseService;
 
-    // Devuelve una lista de todas las compras
+    @Operation(summary = "Obtener una lista de todas las compras")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Lista obtenida",
+                    content = { @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = Book.class)) })})
     @GetMapping("")
     @ResponseBody
     public ResponseEntity<List<Purchase>> getAllPurhchases() {
         return new ResponseEntity<List<Purchase>>(this.purchaseService.getAllPurchases(), HttpStatus.OK);
     }
 
-    // Devuelve una lita de compras desde una fecha especificada y ordenada o por fechas o por montos
+    @Operation(summary = "Obtener una lista de las compras realizadas por un cliente desde una fecha y ordenada por fechas o montos")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Lista obtenida",
+                    content = { @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = Book.class)) }),
+            @ApiResponse(responseCode = "400", description = "Metodo de ordenamiento invalido",
+                    content = @Content) })
     @GetMapping("/{dni}/{from}/ordenado-por-{order_by}")
     @ResponseBody
     public ResponseEntity<?> getPurchasesFrom(@PathVariable Integer dni, @PathVariable String from, @PathVariable("order_by") String orderBy) {
@@ -37,6 +53,13 @@ public class PurchasesController {
     }
 
     // Devuelve una lita de compras entre dos fechas especificadas y ordenada o por fechas o por montos
+    @Operation(summary = "Obtener una lista de las compras realizadas por un cliente entre dos fechas y ordenada por fechas o montos")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Lista obtenida",
+                    content = { @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = Book.class)) }),
+            @ApiResponse(responseCode = "400", description = "Metodo de ordenamiento invalido",
+                    content = @Content) })
     @GetMapping("/{dni}/{from}/{to}/ordenado-por-{order_by}")
     @ResponseBody
     public ResponseEntity getPurchasesFromTo(@PathVariable Integer dni, @PathVariable String from, @PathVariable String to, @PathVariable("order_by") String orderBy) {

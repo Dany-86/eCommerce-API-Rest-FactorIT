@@ -4,6 +4,7 @@
 
 - Se utilizo base de datos MySQL.
 - Se realizo con la version Java 17.
+- Se utilizo servidor Tomcat a travez del puerto *localhost:8080*
 - Se comparten los procedimientos y los scripts SQL en la carpeta adjuntada en la carpeta raiz del repositorio:
 
   	/informacion_adicional/sql
@@ -14,6 +15,12 @@
 - Se comparte documentacion del proyecto generada con Postman:
 
   [Postman documentation link](https://documenter.getpostman.com/view/22306198/2s8YzWSLkt "Postman documentation")
+
+- Se incorporo Swagger al proyecto, utilizando localhost:8080 puede accederse a las descripciones de OpenAPI en:
+  http://localhost:8080/v3/api-docs/
+
+  y la interfaz grafica para pruebas en:
+  http://localhost:8080/swagger-ui/index.html#/
 
 #### Descripcion
 
@@ -30,7 +37,7 @@ Como esta especificado en el archivo de la carpeta */sql* junto a sus scripts, l
 
 ##### Consideraciones posteriores
 
-Por falta de tiempo quedo aplicado a medias el patron DTO. Quedaron por realizar un grupo de validaciones adicionales. En algunas clases como *CartServiceImpl* se podrian aplicar una mejor reutilizacion de codigo.
+Por falta de tiempo quedo aplicado a medias el patron DTO. Quedaron por realizar un grupo de validaciones adicionales. En algunas clases como ,*CartServiceImpl* por ejemplo, se podrian aplicar una mejor reutilizacion de codigo.
 
 #### Agradecimientos
 
