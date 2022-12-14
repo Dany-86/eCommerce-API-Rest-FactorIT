@@ -24,6 +24,7 @@ public class CheckoutController {
     // ------------------------------------- MANEJO DE CARRITOS ---------------------------------------------
 
     // Devuelve una lista de todos los carritos
+
     @GetMapping("")
     @ResponseBody
     public ResponseEntity<List<Cart>> getCarts() {

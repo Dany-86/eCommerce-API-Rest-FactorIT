@@ -1,0 +1,1437 @@
+{
+	"info": {
+		"_postman_id": "72762f76-2c92-44f5-87d4-da21102bdf04",
+		"name": "eCommerce-API-Challenge-Factor-IT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22306198"
+	},
+	"item": [
+		{
+			"name": "Consultas todos",
+			"item": [
+				{
+					"name": "Productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "Devuelve un lista con todos los productos disponibles ordenados por id"
+					},
+					"response": [
+						{
+							"name": "Productos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/productos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"productos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Dec 2022 14:42:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Impresora\",\n        \"price\": 700\n    },\n    {\n        \"id\": 2,\n        \"name\": \"TV Smart\",\n        \"price\": 3200\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Ventilador\",\n        \"price\": 400\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Celular\",\n        \"price\": 2000\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Laptop\",\n        \"price\": 4500\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Mouse\",\n        \"price\": 100\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Heladera\",\n        \"price\": 4300\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Licuadora\",\n        \"price\": 500\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Tablet\",\n        \"price\": 2000\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Aire Acondicioando\",\n        \"price\": 4200\n    },\n    {\n        \"id\": 11,\n        \"name\": \"Monitor\",\n        \"price\": 1500\n    },\n    {\n        \"id\": 12,\n        \"name\": \"Estabilizador\",\n        \"price\": 400\n    },\n    {\n        \"id\": 13,\n        \"name\": \"Cafetera\",\n        \"price\": 1000\n    },\n    {\n        \"id\": 14,\n        \"name\": \"Minipimer\",\n        \"price\": 450\n    },\n    {\n        \"id\": 15,\n        \"name\": \"Tostadora\",\n        \"price\": 500\n    },\n    {\n        \"id\": 18,\n        \"name\": \"Lavarropas\",\n        \"price\": 2500\n    },\n    {\n        \"id\": 21,\n        \"name\": \"Calefactor\",\n        \"price\": 400\n    },\n    {\n        \"id\": 50,\n        \"name\": \"Cocina\",\n        \"price\": 3000\n    },\n    {\n        \"id\": 67,\n        \"name\": \"Auriculares\",\n        \"price\": 150\n    },\n    {\n        \"id\": 73,\n        \"name\": \"Parlante Portatil\",\n        \"price\": 900\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "Devuelve una lista con todos los clientes registrados ordenados por DNI."
+					},
+					"response": [
+						{
+							"name": "Clientes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/clientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Dec 2022 14:56:43 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"dni\": 17589665,\n        \"name\": \"Susana Ramirez\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 18589685,\n        \"name\": \"Ximena Garcia\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 21647987,\n        \"name\": \"Carlos Martinez\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 22647987,\n        \"name\": \"Carmen Pierro\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 22654558,\n        \"name\": \"Jose Alvarez\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 23548469,\n        \"name\": \"Juan Fernandez\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 23798469,\n        \"name\": \"Jorge Colombres\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 27854598,\n        \"name\": \"Manuel Quintana\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 30255416,\n        \"name\": \"Romina Pereira\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 32456224,\n        \"name\": \"Diego Torres\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 32511224,\n        \"name\": \"Sebastian Zabala\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 32546688,\n        \"name\": \"Andres Nieto\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 32779811,\n        \"name\": \"Andrea Perez\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 32953641,\n        \"name\": \"Alejandro Perez\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 34953641,\n        \"name\": \"Alexis Pierro\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 38255416,\n        \"name\": \"Sabrina Fuentes\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 40596565,\n        \"name\": \"Melisa Alvarez\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 42596565,\n        \"name\": \"Melany Silva\",\n        \"vip\": false\n    },\n    {\n        \"dni\": 42669654,\n        \"name\": \"Mirta Romero\",\n        \"vip\": false\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Compras",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "Devuelve una lista con todas las compras realizadas ordenadas por fecha en forma descendente."
+					},
+					"response": [
+						{
+							"name": "Compras",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/compras",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"compras"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Dec 2022 15:08:46 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 30,\n        \"date\": \"2022-12-13\",\n        \"total\": 2500,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 26,\n        \"date\": \"2022-12-13\",\n        \"total\": 100,\n        \"client\": {\n            \"dni\": 38255416,\n            \"name\": \"Sabrina Fuentes\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 31,\n        \"date\": \"2022-12-13\",\n        \"total\": 1100,\n        \"client\": {\n            \"dni\": 18589685,\n            \"name\": \"Ximena Garcia\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 27,\n        \"date\": \"2022-12-03\",\n        \"total\": 4300,\n        \"client\": {\n            \"dni\": 38255416,\n            \"name\": \"Sabrina Fuentes\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 15,\n        \"date\": \"2022-11-23\",\n        \"total\": 3500,\n        \"client\": {\n            \"dni\": 38255416,\n            \"name\": \"Sabrina Fuentes\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 19,\n        \"date\": \"2022-11-20\",\n        \"total\": 2000,\n        \"client\": {\n            \"dni\": 38255416,\n            \"name\": \"Sabrina Fuentes\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 28,\n        \"date\": \"2022-11-18\",\n        \"total\": 500,\n        \"client\": {\n            \"dni\": 18589685,\n            \"name\": \"Ximena Garcia\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 18,\n        \"date\": \"2022-11-18\",\n        \"total\": 500,\n        \"client\": {\n            \"dni\": 18589685,\n            \"name\": \"Ximena Garcia\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 16,\n        \"date\": \"2022-11-15\",\n        \"total\": 100,\n        \"client\": {\n            \"dni\": 38255416,\n            \"name\": \"Sabrina Fuentes\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 20,\n        \"date\": \"2022-11-13\",\n        \"total\": 5100,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 21,\n        \"date\": \"2022-11-11\",\n        \"total\": 200,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 17,\n        \"date\": \"2022-11-03\",\n        \"total\": 2300,\n        \"client\": {\n            \"dni\": 38255416,\n            \"name\": \"Sabrina Fuentes\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 22,\n        \"date\": \"2022-11-01\",\n        \"total\": 2000,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 9,\n        \"date\": \"2022-10-20\",\n        \"total\": 2000,\n        \"client\": {\n            \"dni\": 38255416,\n            \"name\": \"Sabrina Fuentes\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 8,\n        \"date\": \"2022-10-19\",\n        \"total\": 500,\n        \"client\": {\n            \"dni\": 38255416,\n            \"name\": \"Sabrina Fuentes\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 10,\n        \"date\": \"2022-10-18\",\n        \"total\": 7000,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 14,\n        \"date\": \"2022-10-16\",\n        \"total\": 2000,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 12,\n        \"date\": \"2022-10-13\",\n        \"total\": 1100,\n        \"client\": {\n            \"dni\": 38255416,\n            \"name\": \"Sabrina Fuentes\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 11,\n        \"date\": \"2022-10-11\",\n        \"total\": 3200,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 25,\n        \"date\": \"2022-10-01\",\n        \"total\": 3500,\n        \"client\": {\n            \"dni\": 38255416,\n            \"name\": \"Sabrina Fuentes\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 5,\n        \"date\": \"2022-09-23\",\n        \"total\": 2500,\n        \"client\": {\n            \"dni\": 38255416,\n            \"name\": \"Sabrina Fuentes\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 4,\n        \"date\": \"2022-09-16\",\n        \"total\": 1000,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 6,\n        \"date\": \"2022-09-15\",\n        \"total\": 100,\n        \"client\": {\n            \"dni\": 18589685,\n            \"name\": \"Ximena Garcia\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 3,\n        \"date\": \"2022-09-13\",\n        \"total\": 3100,\n        \"client\": {\n            \"dni\": 38255416,\n            \"name\": \"Sabrina Fuentes\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 2,\n        \"date\": \"2022-09-11\",\n        \"total\": 2200,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 1,\n        \"date\": \"2022-09-11\",\n        \"total\": 1200,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 7,\n        \"date\": \"2022-09-03\",\n        \"total\": 3300,\n        \"client\": {\n            \"dni\": 38255416,\n            \"name\": \"Sabrina Fuentes\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 29,\n        \"date\": \"2022-08-20\",\n        \"total\": 2000,\n        \"client\": {\n            \"dni\": 38255416,\n            \"name\": \"Sabrina Fuentes\",\n            \"vip\": false\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Carritos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/carritos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carritos"
+							]
+						},
+						"description": "Devuelve una lista con todos los carritos abiertos."
+					},
+					"response": [
+						{
+							"name": "Carritos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/carritos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"carritos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Dec 2022 15:11:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				}
+			],
+			"description": "Consultas por las listas de clientes registrados, productos disponibles, compras realizadas, y carritos en proceso."
+		},
+		{
+			"name": "Consultas compras",
+			"item": [
+				{
+					"name": "Compras de un cliente desde/metodo de ordenamiento",
+					"item": [
+						{
+							"name": "Estructura url compras de un cliente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/compras/{{dni}}/{{fecha-from}}/ordenado-por-{{ordenamiento}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"compras",
+										"{{dni}}",
+										"{{fecha-from}}",
+										"ordenado-por-{{ordenamiento}}"
+									]
+								},
+								"description": "Devuelve una lista de compras realizadas por el cliente indentificado por el parametro de url dni desde la fecha-from especificada en formato YYYY-MM-DD y ordenado por lo especificado en ordenamiento siendo las opciones por fechas o montos (siempre lo devuelve en forma descendente)"
+							},
+							"response": []
+						},
+						{
+							"name": "Compras DNI 21647987 from 2022-10-01 ordenado por fechas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/compras/21647987/2022-10-01/ordenado-por-fechas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"compras",
+										"21647987",
+										"2022-10-01",
+										"ordenado-por-fechas"
+									]
+								},
+								"description": "Ordenado por fechas"
+							},
+							"response": [
+								{
+									"name": "Ejemplo compras DNI 21647987 from 2022-10-01 ordenado por fechas",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/compras/21647987/2022-10-01/ordenado-por-fechas",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"compras",
+												"21647987",
+												"2022-10-01",
+												"ordenado-por-fechas"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 15:35:51 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 30,\n        \"date\": \"2022-12-13\",\n        \"total\": 2500,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 20,\n        \"date\": \"2022-11-13\",\n        \"total\": 5100,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 21,\n        \"date\": \"2022-11-11\",\n        \"total\": 200,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 22,\n        \"date\": \"2022-11-01\",\n        \"total\": 2000,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 10,\n        \"date\": \"2022-10-18\",\n        \"total\": 7000,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 14,\n        \"date\": \"2022-10-16\",\n        \"total\": 2000,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 11,\n        \"date\": \"2022-10-11\",\n        \"total\": 3200,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Compras DNI 21647987 from 2022-11-01 ordenado por montos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/compras/21647987/2022-11-01/ordenado-por-montos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"compras",
+										"21647987",
+										"2022-11-01",
+										"ordenado-por-montos"
+									]
+								},
+								"description": "Ordenado por montos"
+							},
+							"response": [
+								{
+									"name": "Ejemplo compras DNI 21647987 from 2022-10-01 ordenado por fechas Copy",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/compras/21647987/2022-11-01/ordenado-por-montos",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"compras",
+												"21647987",
+												"2022-11-01",
+												"ordenado-por-montos"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 15:38:17 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 20,\n        \"date\": \"2022-11-13\",\n        \"total\": 5100,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 30,\n        \"date\": \"2022-12-13\",\n        \"total\": 2500,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 22,\n        \"date\": \"2022-11-01\",\n        \"total\": 2000,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 21,\n        \"date\": \"2022-11-11\",\n        \"total\": 200,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Compras de un cliente desde/hasta/metodo de ordenamiento",
+					"item": [
+						{
+							"name": "Estructura url compras de un cliente ordenandas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/compras/{{dni}}/{{fecha-from}}/{{fecha-to}}/ordenado-por-{{ordenamiento}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"compras",
+										"{{dni}}",
+										"{{fecha-from}}",
+										"{{fecha-to}}",
+										"ordenado-por-{{ordenamiento}}"
+									]
+								},
+								"description": "Devuelve una lista de compras realizadas por el cliente indentificado por el parametro de url dni desde la fecha-from especificada en formato YYYY-MM-DD hasta una fecha to especificada en formato YYYY-MM-DD y ordenado por lo especificado en el parametro ordenamiento siendo las opciones: por fechas o montos (siempre lo devuelve en forma descendente)."
+							},
+							"response": []
+						},
+						{
+							"name": "Compras DNI 21647987 desde 2022-10-01 hasta 2022-11-30 ordenado por fechas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/compras/21647987/2022-10-01/2022-11-30/ordenado-por-fechas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"compras",
+										"21647987",
+										"2022-10-01",
+										"2022-11-30",
+										"ordenado-por-fechas"
+									]
+								},
+								"description": "Ordenado por fechas"
+							},
+							"response": [
+								{
+									"name": "Compras DNI 21647987 desde 2022-10-01 hasta 2022-11-30 ordenado por fechas",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/compras/21647987/2022-10-01/2022-11-30/ordenado-por-fechas",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"compras",
+												"21647987",
+												"2022-10-01",
+												"2022-11-30",
+												"ordenado-por-fechas"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 15:51:33 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 20,\n        \"date\": \"2022-11-13\",\n        \"total\": 5100,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 21,\n        \"date\": \"2022-11-11\",\n        \"total\": 200,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 22,\n        \"date\": \"2022-11-01\",\n        \"total\": 2000,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 10,\n        \"date\": \"2022-10-18\",\n        \"total\": 7000,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 14,\n        \"date\": \"2022-10-16\",\n        \"total\": 2000,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 11,\n        \"date\": \"2022-10-11\",\n        \"total\": 3200,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Compras DNI 21647987 desde 2022-10-01 hasta 2022-11-30 ordenado por montos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/compras/21647987/2022-10-01/2022-11-30/ordenado-por-fechas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"compras",
+										"21647987",
+										"2022-10-01",
+										"2022-11-30",
+										"ordenado-por-fechas"
+									]
+								},
+								"description": "Ordenado por montos"
+							},
+							"response": [
+								{
+									"name": "Compras DNI 21647987 desde 2022-10-01 hasta 2022-11-30 ordenado por fechas Copy",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/compras/21647987/2022-10-01/2022-11-30/ordenado-por-montos",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"compras",
+												"21647987",
+												"2022-10-01",
+												"2022-11-30",
+												"ordenado-por-montos"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 15:52:49 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 10,\n        \"date\": \"2022-10-18\",\n        \"total\": 7000,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 20,\n        \"date\": \"2022-11-13\",\n        \"total\": 5100,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 11,\n        \"date\": \"2022-10-11\",\n        \"total\": 3200,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 14,\n        \"date\": \"2022-10-16\",\n        \"total\": 2000,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 22,\n        \"date\": \"2022-11-01\",\n        \"total\": 2000,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    },\n    {\n        \"id\": 21,\n        \"date\": \"2022-11-11\",\n        \"total\": 200,\n        \"client\": {\n            \"dni\": 21647987,\n            \"name\": \"Carlos Martinez\",\n            \"vip\": false\n        }\n    }\n]"
+								}
+							]
+						}
+					]
+				}
+			],
+			"description": "Consultas de las compras de un cliente en particular"
+		},
+		{
+			"name": "Carrito de compras",
+			"item": [
+				{
+					"name": "Gestion de un carrito",
+					"item": [
+						{
+							"name": "Consultar carrito",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/carritos/38255416",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"carritos",
+										"38255416"
+									]
+								},
+								"description": "Devuelve los productos de el carrito de un cliente\n\n#### Estructura url\n\n//localhost:8080/carritos/{{dni}}\n\n- Parametro dni: DNI del cliente"
+							},
+							"response": [
+								{
+									"name": "Consultar carrito",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/carritos/38255416",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"carritos",
+												"38255416"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 16:49:00 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[]"
+								}
+							]
+						},
+						{
+							"name": "Consultar total",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/carritos/total/38255416",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"carritos",
+										"total",
+										"38255416"
+									]
+								},
+								"description": "Calcula el total y lo devuelve con las promociones aplicadas\n\n#### Estructura url\n\n//localhost:8080/carritos/total/{{dni}}\n\n- Parametro dni: DNI del cliente"
+							},
+							"response": [
+								{
+									"name": "Consultar total",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/carritos/total/38255416",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"carritos",
+												"total",
+												"38255416"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 17:10:32 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"El cliente especificado no contiene productos en su carrito\"\n}"
+								},
+								{
+									"name": "Consultar total",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/carritos/total/38255416",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"carritos",
+												"total",
+												"38255416"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 17:16:19 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"El cliente especificado no contiene un carrito creado\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Comprar / Cerrar carrito",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/carritos/terminar/38255416",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"carritos",
+										"terminar",
+										"38255416"
+									]
+								},
+								"description": "Hace el calculo de las promociones, cierra el carrito, genera la compra y devuelve la compra generada. O un mensaje indicando si no se pudo realizar\n\n#### Estructura url\n\n//localhost:8080/carritos/terminar/{{dni}}\n\n- Parametro dni: DNI del cliente"
+							},
+							"response": [
+								{
+									"name": "Cerrar carrito / Comprar",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/carritos/terminar/38255416",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"carritos",
+												"terminar",
+												"38255416"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 17:34:37 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"El cliente especificado no contiene un carrito creado\"\n}"
+								},
+								{
+									"name": "Cerrar carrito / Comprar",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/carritos/terminar/38255416",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"carritos",
+												"terminar",
+												"38255416"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 17:35:44 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"El cliente especificado no contiene productos en su carrito\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Crear un carrito",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/carritos/38255416",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"carritos",
+										"38255416"
+									]
+								},
+								"description": "Crea un carrito correspondiente al dni suministrado y devuleve el id del carrito creado o el id previamente existente y mensaje.\n\n#### Estructura url\n\n//localhost:8080/carritos/{{dni}}\n\n- Parametro dni: DNI del cliente"
+							},
+							"response": [
+								{
+									"name": "Crear un carrito",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/carritos/38255416",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"carritos",
+												"38255416"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 16:49:11 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"message\": \"El carrito fue creado exitosamente\"\n}"
+								},
+								{
+									"name": "Crear un carrito",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/carritos/38255416",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"carritos",
+												"38255416"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 16:49:21 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"message\": \"Ya existe un carrito\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Elimina un carrito",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/carritos/38255416",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"carritos",
+										"38255416"
+									]
+								},
+								"description": "Elimina un carrito correspondiente al dni suministrado y devuelve un mensaje.\n\n#### Estructura url\n\n//localhost:8080/carritos/{{dni}}\n\n- Parametro dni: DNI del cliente"
+							},
+							"response": [
+								{
+									"name": "Elimina un carrito",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/carritos/38255416",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"carritos",
+												"38255416"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 16:48:29 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Carrito borrado exitosamente\"\n}"
+								},
+								{
+									"name": "Elimina un carrito",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/carritos/38255416",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"carritos",
+												"38255416"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 16:48:45 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"No existe ningun carrito para este cliente\"\n}"
+								}
+							]
+						}
+					],
+					"description": "Crear/Consultar/Eliminar un carrito de compras de un cliente"
+				},
+				{
+					"name": "Gestion de los productos de un carrito",
+					"item": [
+						{
+							"name": "Agregar un producto al carrito",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/carritos/38255416/agregar-producto/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"carritos",
+										"38255416",
+										"agregar-producto",
+										"1"
+									]
+								},
+								"description": "Recibe un dni y un id de producto y lo agrega al carrito del cliente devolviendo el id del carrito y un mensaje. O solo un mensaje en caso de no existir el carrito.\n\n#### Estructura url\n\n//localhost:8080/carritos/{{dni}}/agregar-producto/{{id_prod}}\n\n- Parametro dni: DNI del cliente\n- Parametro id_prod: id del producto"
+							},
+							"response": [
+								{
+									"name": "Agregar un producto al carrito",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/carritos/38255416/agregar-producto/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"carritos",
+												"38255416",
+												"agregar-producto",
+												"1"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 17:47:34 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"No se puede agregar el producto. El carrito no existe\"\n}"
+								},
+								{
+									"name": "Agregar un producto al carrito",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/carritos/38255416/agregar-producto/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"carritos",
+												"38255416",
+												"agregar-producto",
+												"1"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 17:48:11 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 4,\n    \"message\": \"Producto agregado correctamente al carrito\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Eliminar un producto de un carrito",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/carritos/38255416/eliminar-producto/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"carritos",
+										"38255416",
+										"eliminar-producto",
+										"1"
+									]
+								},
+								"description": "Recibe un dni y un id de producto y elimina un producto del carrito del cliente devolviendo el id del carrito y un mensaje. O solo un mensaje en caso de no existir el carrito.\n\n#### Estructura url\n\n//localhost:8080/carritos/{{dni}}/eliminar-producto/{{id_prod}}\n\n- Parametro dni: DNI del cliente\n- Parametro id_prod: id del producto"
+							},
+							"response": [
+								{
+									"name": "Eliminar un producto de un carrito",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/carritos/38255416/eliminar-producto/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"carritos",
+												"38255416",
+												"eliminar-producto",
+												"1"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 17:55:11 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"No se encontro el producto. El carrito ya esta vacio\"\n}"
+								},
+								{
+									"name": "Eliminar un producto de un carrito",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/carritos/38255416/eliminar-producto/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"carritos",
+												"38255416",
+												"eliminar-producto",
+												"1"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 17:55:43 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"No se encontro el producto. El carrito no existe. Por favor cree uno\"\n}"
+								},
+								{
+									"name": "Eliminar un producto de un carrito",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/carritos/38255416/eliminar-producto/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"carritos",
+												"38255416",
+												"eliminar-producto",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Dec 2022 17:56:26 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Producto fue eliminado del carrito correctammente\"\n}"
+								}
+							]
+						}
+					],
+					"description": "Agregar/Eliminar productos de un carrito de un cliente"
+				}
+			]
+		}
+	]
+}
